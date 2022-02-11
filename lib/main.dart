@@ -12,7 +12,16 @@ import 'ingore.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: firebaseOptions);
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+    apiKey: apiKey,
+    authDomain: authDomain,
+    projectId: projectId,
+    storageBucket: storageBucket,
+    messagingSenderId: messagingSenderId,
+    appId: appId,
+    measurementId: measurementId,
+  ));
   GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
   runApp(const MyApp());
 }
