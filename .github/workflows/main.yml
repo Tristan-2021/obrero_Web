@@ -18,6 +18,6 @@ jobs:
       - run: flutter pub get
       - run: flutter build web --release
       - run: peaceiris/actions-gh-pages@v3
-      - with: |
-          github_token: ${{ secrests.token }}
+      - run: |
+          github_token: ${{ secrets.token }}
           publish_dir: ./build/web 
