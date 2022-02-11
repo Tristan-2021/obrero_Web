@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-String _title(BuildContext context) =>
-    (context as Element).findAncestorWidgetOfExactType<MaterialApp>()!.title;
-
 class Page2 extends StatelessWidget {
   const Page2({Key? key}) : super(key: const ValueKey('about'));
 
