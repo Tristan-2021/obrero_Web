@@ -119,9 +119,7 @@ class _ReadBlogState extends State<ReadBlog> {
     );
   }
 
-  _funcionurl(String valor) {
-    print('que valor deb salir $valor');
-  }
+  _funcionurl(String valor) {}
 
   _urllauncher(String url) async {
     if (!url.startsWith('http')) {
