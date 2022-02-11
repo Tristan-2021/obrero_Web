@@ -14,13 +14,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
       options: const FirebaseOptions(
-    apiKey: apiKey,
-    authDomain: authDomain,
-    projectId: projectId,
-    storageBucket: storageBucket,
-    messagingSenderId: messagingSenderId,
-    appId: appId,
-    measurementId: measurementId,
+    apiKey: 'AIzaSyB7zYuXd8UbryfgvtM-BgkBPrtISi20iHI',
+    authDomain: 'blogabogado-fc776.firebaseapp.com',
+    projectId: 'blogabogado-fc776',
+    storageBucket: 'blogabogado-fc776.appspot.com',
+    messagingSenderId: '276349583756',
+    appId: '1:276349583756:web:b38e890173335f4dddd6a9',
+    measurementId: 'G-VER4XZS1JW',
   ));
   GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
   runApp(const MyApp());
