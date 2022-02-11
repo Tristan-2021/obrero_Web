@@ -8,7 +8,6 @@ import 'example/view/create_blog.dart';
 import 'example/view/home_page.dart';
 import 'example/view/page1.dart';
 import 'example/view/read_more_blog.dart';
-import 'ingore.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
