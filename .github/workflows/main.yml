@@ -1,0 +1,23 @@
+name: Obrero Web 
+ 
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build Web
+    
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'stable'
+      - run: flutter config --enable-web
+      - run: flutter pub get
+      - run: flutter build web --release
+      - run: peaceiris/actions-gh-pages@v3
+      - run: |
+          github_token: ${{ secrests.token }}
+          publish_dir: ./build/web 
