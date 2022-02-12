@@ -125,15 +125,18 @@ class _HomePageState extends State<HomePage> {
                 width: 25,
               ),
             ]),
-        body: SafeArea(
-            child: Center(
-                child: ScrollablePositionedList.builder(
-                    scrollDirection: Axis.vertical,
-                    itemCount: 2,
-                    itemPositionsListener: _itemPositionListener,
-                    itemScrollController: _itemScrollController,
-                    itemBuilder: (_, index) {
-                      return selecte(index, size);
-                    }))));
-  }
+        body:  const Center(child: FittedBox(child: Text('Vacío')),)
+        // SafeArea(
+        //     child: Center(
+        //         child: ScrollablePositionedList.builder(
+        //             scrollDirection: Axis.vertical,
+        //             itemCount: 2,
+        //             itemPositionsListener: _itemPositionListener,
+        //             itemScrollController: _itemScrollController,
+        //             itemBuilder: (_, index) {
+        //               return selecte(index, size);
+        //             }))
+        //             )
+                    );
+  } 
 }
