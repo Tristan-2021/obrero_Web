@@ -15,6 +15,6 @@ void main() async {
     appId: '1:276349583756:web:b38e890173335f4dddd6a9',
     measurementId: 'G-VER4XZS1JW',
   ));
-  GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
+ // GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
   runApp(const MyApp());
 }
