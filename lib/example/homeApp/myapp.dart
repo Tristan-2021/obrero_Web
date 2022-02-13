@@ -70,7 +70,8 @@ final _router = GoRouter(
                         );
                       }
                       return const Center(
-                        child: Text('Vacío'),
+                        child: FittedBox(
+                            child: Text('Estamos realizando cambios')),
                       );
                     }),
               );
