@@ -37,7 +37,6 @@ class _MyAppState extends State<MyApp> {
 final _router = GoRouter(
   urlPathStrategy: UrlPathStrategy.hash,
   debugLogDiagnostics: true,
-  // initialLocation: '/',
   routes: [
     GoRoute(
       name: 'home',
