@@ -17,7 +17,7 @@ class PageExample1 extends StatelessWidget {
   Widget build(BuildContext context) {
     ListaIcons stream = ListaIcons();
     return LayoutBuilder(builder: (context, constrains) {
-      ResponsiveUi().init(constrains);
+      ResponsiveUi.init(constrains);
 
       return Scaffold(
         backgroundColor: colorazulospocooscuro,
@@ -65,9 +65,10 @@ class PageExample1 extends StatelessWidget {
               child: SizedBox(
                 child: Text(
                   bienvenidos,
+                  textScaleFactor: ResponsiveUi.textHeith * 0.14,
                   style: GoogleFonts.lato(
                       color: const Color(0xffD0F1EF),
-                      fontSize: ResponsiveUi.textHeith * 2.0,
+                      // fontSize: ResponsiveUi.textHeith * 2.0,
                       fontWeight: FontWeight.w400,
                       letterSpacing: 2.0),
                 ),

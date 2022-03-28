@@ -10,14 +10,13 @@ class ListaIcons {
         color: Colors.white,
         key: UniqueKey(),
         redScoial: 'medium',
-        url: 'https://medium.com/me/lists'),
+        url: 'https://medium.com/@candangasrodriguito'),
     CustomContainer(
       name: FontAwesomeIcons.github,
       color: Colors.black,
       key: UniqueKey(),
       redScoial: 'github',
-      url:
-          'https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1625066420&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f0%2f%3fstate%3d1%26redirectTo%3daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwvMC9pbmJveC8%26nlp%3d1%26RpsCsrfState%3d806552aa-b8c2-0aa4-d679-1707c8aba52d&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015',
+      url: 'https://github.com/Tristan-2021/obrero_Web',
     ),
     CustomContainer(
         redScoial: 'facebook',

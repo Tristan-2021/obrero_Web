@@ -16,7 +16,8 @@ class BlogCubit extends Cubit<BlogState> {
     if (data.isNotEmpty) {
       emit(BlogLoaded(data));
     } else {
-      emit(const BlogError('Hubo un error'));
+      emit(const BlogError(
+          'Hubo un error con el Servidor, lo estamos arreglando'));
     }
   }
 
@@ -40,7 +41,6 @@ class BlogCubit extends Cubit<BlogState> {
     var ka = FirebaseFirestore.instance.collection('data').doc(id);
     final v = await ka.get();
     if (v.exists) {
-      print(v.id);
       final das = BlogModel.fromJson(v);
       return das;
     }

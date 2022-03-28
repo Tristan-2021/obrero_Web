@@ -33,11 +33,12 @@ class _CustomContainerState extends State<CustomContainer>
     _controller = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 2200));
 
-    itemIcon = CurveTween(curve: Interval(0.1, 0.6, curve: Curves.elasticOut))
-        .animate(_controller);
+    itemIcon =
+        CurveTween(curve: const Interval(0.1, 0.6, curve: Curves.elasticOut))
+            .animate(_controller);
 
     itemIconOut =
-        CurveTween(curve: Interval(0.6, 1.0, curve: Curves.decelerate))
+        CurveTween(curve: const Interval(0.6, 1.0, curve: Curves.decelerate))
             .animate(_controller);
 
     super.initState();
@@ -46,15 +47,6 @@ class _CustomContainerState extends State<CustomContainer>
   void _launchURL() async => await canLaunch(widget.url)
       ? await launch(widget.url)
       : throw 'Could not launch $widget.url';
-
-  _launchURLcorreo(String correo) async {
-    final url = Uri.encodeFull('mailto:$correo?subject=News&body=New plugin');
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 
   @override
   void dispose() {

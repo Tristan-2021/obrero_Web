@@ -22,14 +22,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    _itemPositionListener.itemPositions.addListener(() {
-      // final indces = _itemPositionListener.itemPositions.value.where((ele) {
-      //   final sitopvisible = ele.itemLeadingEdge >= 0;
-      //   final sitopvisible1 = ele.itemTrailingEdge <= 1;
-
-      //   return sitopvisible && sitopvisible1;
-      // }).map((e) => e.index);
-    });
+    _itemPositionListener.itemPositions.addListener(() {});
   }
 
   Widget selecte(
@@ -86,12 +79,6 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
             elevation: 0.0,
             backgroundColor: colorazulospocooscuro,
-            leading: IconButton(
-              icon: const Icon(Icons.home, color: Colors.black),
-              onPressed: () {
-                // context.goNamed('about');
-              },
-            ),
             actions: [
               const SizedBox(
                 height: 40,
@@ -125,8 +112,7 @@ class _HomePageState extends State<HomePage> {
                 width: 25,
               ),
             ]),
-        body: 
-        SafeArea(
+        body: SafeArea(
             child: Center(
                 child: ScrollablePositionedList.builder(
                     scrollDirection: Axis.vertical,
@@ -135,8 +121,6 @@ class _HomePageState extends State<HomePage> {
                     itemScrollController: _itemScrollController,
                     itemBuilder: (_, index) {
                       return selecte(index, size);
-                    }))
-                    )
-                    );
-  } 
+                    }))));
+  }
 }

@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/src/go_router.dart';
 import 'package:nombreapp/example/model/blog.dart';
 import 'package:flutter_quill/flutter_quill.dart' as _control;
 import 'package:flutter_quill/flutter_quill.dart' as document;

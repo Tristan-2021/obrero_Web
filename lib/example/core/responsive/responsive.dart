@@ -6,7 +6,7 @@ class ResponsiveUi {
   static late double textHeith;
   static late double textcontraints;
 
-  void init(BoxConstraints constraints) {
+  static void init(BoxConstraints constraints) {
     textcontraints = constraints.maxWidth / 100;
 
     if (constraints.maxWidth <= 900) {
