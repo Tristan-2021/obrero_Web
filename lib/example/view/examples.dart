@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nombreapp/example/core/responsive/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../cubit/blog_cubit.dart';
+import '../cubit/blog_cubit.dart';
 import '../utils/icons_stream.dart';
 import '../utils/style_text_font.dart';
 

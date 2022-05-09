@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nombreapp/example/view/home_page.dart';
 
-import '../../cubit/blog_cubit.dart';
+import '../cubit/blog_cubit.dart';
+
 
 
 
