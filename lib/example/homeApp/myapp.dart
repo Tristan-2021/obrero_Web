@@ -66,7 +66,7 @@ final _router = GoRouter(
   errorPageBuilder: (context, state) => MaterialPage<void>(
     key: state.pageKey,
     child: Errorpage(
-      error: 'Weeoe${state.error.toString()}',
+      error: state.error.toString(),
     ),
   ),
 );

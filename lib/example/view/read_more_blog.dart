@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:nombreapp/example/model/blog.dart';
 import 'package:flutter_quill/flutter_quill.dart' as _control;
-import 'package:flutter_quill/flutter_quill.dart' as document;
 import 'package:url_launcher/url_launcher.dart';
 
 class ReadBlog extends StatefulWidget {

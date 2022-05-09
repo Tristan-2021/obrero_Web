@@ -3,14 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nombreapp/example/core/responsive/responsive.dart';
 
 String titulogrande =
-    'Aquí encontrarás contenido\nrelacionado al Derecho y la\nProgramación';
+    'Aquí encontrarás contenido\nrelacionado al Derecho Digital y \nProgramación';
 String bienvenidos = 'Bienvenido..!';
 String titulosiguiente =
-    'En este Blog hablaremos sobre\nprogramación y el Derecho Digital, haciendo una\nfusión de ambas profesiones pero de\nvez en cuando trataré otros temas';
+    'En este Blog trataremos contenido sobre\nprogramación, Protección Datos, Ciberdelitos, Derecho\nDigital,haciendo una miscelánia de ambas profesiones pero de\nvez en cuando trataré otros temas';
 String titulosiguiente1 =
-    'En este Blog hablaremos contenido sobre\nprogramación y el Derecho Digital, haciendo una\nfusión de ambas profesiones pero de\nvez en cuando trataré otros temas';
+    'En este Blog trataremos contenido sobre\nProtección Datos, Ciberdelitos, Derecho Digital\n,haciendo una miscelánia de ambas profesiones pero de\nvez en cuando trataré otros temas';
 String titulosiguiente1web =
-    'Aquí encontrarás contenido\nrelacionado al Derecho y la\nProgramación';
+    'Aquí encontrarás contenido\nrelacionado al Derecho\nDigital y Programación';
 
 TextStyle estiloAndroid = const TextStyle(fontSize: 24.0);
 Color colorazulospocooscuro = const Color(0xff064683);
