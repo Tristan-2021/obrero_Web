@@ -49,32 +49,11 @@ final _router = GoRouter(
         GoRoute(
           path: 'blog/:fid',
           pageBuilder: (context, state) {
-            var l = BlocProvider.of<BlogCubit>(context);
+            // var l = BlocProvider.of<BlogCubit>(context);
 
             return MaterialPage<void>(
               key: state.pageKey,
-              child: FutureBuilder<Blog>(
-                  future: l.lista(state.params['fid']!),
-                  builder: (context, snapshot) {
-                    if (!snapshot.hasData) {
-                      return const Center(
-                        child: CircularProgressIndicator(),
-                      );
-                    } else if (snapshot.data != null) {
-                      if (snapshot.data!.id.isEmpty) {
-                        return Errorpage(
-                          error: state.error.toString(),
-                        );
-                      }
-                      return ReadBlog(
-                        blog: snapshot.data!,
-                      );
-                    }
-                    return const Center(
-                      child:
-                          FittedBox(child: Text('Estamos realizando cambios')),
-                    );
-                  }),
+              child: const ReadBlog(),
             );
           },
         ),
