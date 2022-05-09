@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'example/homeApp/myapp.dart';
-// void configureApp() {
-//   setUrlStrategy(PathUrlStrategy());
-// }
+
 
 void main() async {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +14,5 @@ void main() async {
   //   appId: '',
   //   measurementId: '',
   // ));
-  //setPathUrlStrategy();
   runApp(const MyApp());
 }

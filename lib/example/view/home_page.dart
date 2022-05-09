@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nombreapp/example/view/examples.dart';
-import 'package:nombreapp/utils/style_text_font.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+
+import '../utils/style_text_font.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

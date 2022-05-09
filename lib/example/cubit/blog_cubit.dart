@@ -11,32 +11,14 @@ class BlogCubit extends Cubit<BlogState> {
   List<BlogModel> blogmodelista = [];
 
   Future<void> getData() async {
-    //emit(BlogInitial());
-    //List<Blog> data = await casa();
+   
       emit( BlogLoaded(  blogmodelista1));
 
-    // if (data.isNotEmpty) {
-    // } else {
-    //   emit(const BlogError(
-    //       'Hubo un error con el Servidor, lo estamos arreglando'));
-    // }
+ 
   }
 
-  // Future<List<Blog>> casa() async {
-  //   // final _firebaseFirestore = FirebaseFirestore.instance.collection('data');
-  //   // try {
-  //   //   var data = await _firebaseFirestore.get();
-  //   //   List<QueryDocumentSnapshot> bloglista = data.docs;
-  //   //   for (var element in bloglista) {
-  //   //     if (element.exists) {
-  //   //       blogmodelista.add(BlogModel.fromJson(element));
-  //   //     }
-  //   //   }
-  //   //   return blogmodelista;
-  //   // } catch (e) {
-  //   //   return [];
-  //   // } finally {}
-  // }
+
+  }
 
   Future<Blog> lista(String id) async {
     var ka = FirebaseFirestore.instance.collection('data').doc(id);
@@ -53,7 +35,7 @@ class BlogCubit extends Cubit<BlogState> {
         timesData: Timestamp(1636042678, 277200000));
 
   }
-}
+
 
    List<BlogModel> blogmodelista1 = [
       BlogModel(

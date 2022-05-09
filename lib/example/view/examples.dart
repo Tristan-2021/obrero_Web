@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nombreapp/example/core/icons_stream.dart';
 import 'package:nombreapp/example/core/responsive/responsive.dart';
-import 'package:nombreapp/src/clean_architecture/view/cubit/viwcubit/cubit_getdata/cubit/blog_cubit.dart';
-import 'package:nombreapp/utils/style_text_font.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../cubit/blog_cubit.dart';
+import '../utils/icons_stream.dart';
+import '../utils/style_text_font.dart';
+
 
 class PageExample1 extends StatelessWidget {
   final VoidCallback onTap;
@@ -154,8 +155,8 @@ class PageExample2 extends StatelessWidget {
                             mainAxisExtent: size.width <= 500 ? 250.0 : 350.0),
                         itemCount: blog.length,
                         itemBuilder: (_, index) {
-                          // String dateTimefecha =
-                          //     _listaIcons.fechaCompleta(blog[index].timesData);
+                          String dateTimefecha =
+                              _listaIcons.fechaCompleta(blog[index].timesData);
 
                           return GestureDetector(
                             onTap: () => _launchURLBrowser(blog[index].post)
@@ -176,7 +177,7 @@ class PageExample2 extends StatelessWidget {
                                           image:  DecorationImage(
                                               fit: BoxFit.fill,
                                               image: NetworkImage(
-                                                  blog[index].imglink)),
+                                                  blog[index].imglink )),
                                           color: colormenta,
                                           borderRadius: const BorderRadius.only(
                                               topLeft: Radius.circular(10.0),
@@ -188,9 +189,15 @@ class PageExample2 extends StatelessWidget {
                                     height: 2.0,
                                   ),
                                   Row(
-                                    children: const [
-                                      
-                                       Expanded(
+                                    children: [
+                                      Text(
+                                        dateTimefecha,
+                                        style: TextStyle(
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w100,
+                                            color: colorazulospocooscuro),
+                                      ),
+                                      const Expanded(
                                         child: SizedBox(
                                           height: 2.0,
                                         ),
@@ -226,7 +233,7 @@ class PageExample2 extends StatelessWidget {
       )),
     );
   }
-  _launchURLBrowser(String link) async {
+   _launchURLBrowser(String link) async {
   final url = link;
   if (await canLaunch(url)) {
     await launch(url);
