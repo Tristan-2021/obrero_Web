@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:nombreapp/example/model/blog.dart';
 import 'package:nombreapp/example/view/home_page.dart';
 import 'package:nombreapp/example/view/read_more_blog.dart';
 import 'package:nombreapp/src/clean_architecture/view/cubit/viwcubit/cubit_getdata/cubit/blog_cubit.dart';
@@ -49,7 +48,6 @@ final _router = GoRouter(
         GoRoute(
           path: 'blog/:fid',
           pageBuilder: (context, state) {
-            // var l = BlocProvider.of<BlogCubit>(context);
 
             return MaterialPage<void>(
               key: state.pageKey,

@@ -71,7 +71,7 @@ class ListaIcons {
         return 'Fecha';
     }
   }
-
+  
   String fechaCompleta(Timestamp data) {
     int datames =
         DateTime.fromMicrosecondsSinceEpoch(data.microsecondsSinceEpoch)

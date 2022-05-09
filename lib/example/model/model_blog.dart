@@ -9,6 +9,8 @@ class BlogModel extends Blog {
     required this.post,
     //required this.post1,
     required this.titulo,
+    required this.imglink,
+
     required this.id,
     required this.timesData,
   }) : super(
@@ -17,10 +19,11 @@ class BlogModel extends Blog {
           id: id,
           titulo: titulo,
           timesData: timesData,
+          imglink:imglink,
         );
 
   @override
-  final String post, titulo, id;
+  final String post, titulo, id, imglink;
   @override
   final Timestamp timesData;
 
@@ -29,6 +32,7 @@ class BlogModel extends Blog {
       //post1: json["post1"],
       id: json.id,
       titulo: json["titulo"],
+      imglink:json["imglink"],
       timesData: json["timesData"]);
 
   Map<String, dynamic> toJson() => {
@@ -37,6 +41,7 @@ class BlogModel extends Blog {
         "id": id,
         "titulo": titulo,
         "timesData": timesData,
+        "imglink":imglink
       };
 
   @override
@@ -45,5 +50,6 @@ class BlogModel extends Blog {
         id,
         titulo,
         timesData,
+        imglink
       ];
 }

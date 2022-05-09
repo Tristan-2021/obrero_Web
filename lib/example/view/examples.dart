@@ -6,6 +6,7 @@ import 'package:nombreapp/example/core/icons_stream.dart';
 import 'package:nombreapp/example/core/responsive/responsive.dart';
 import 'package:nombreapp/src/clean_architecture/view/cubit/viwcubit/cubit_getdata/cubit/blog_cubit.dart';
 import 'package:nombreapp/utils/style_text_font.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PageExample1 extends StatelessWidget {
   final VoidCallback onTap;
@@ -153,12 +154,11 @@ class PageExample2 extends StatelessWidget {
                             mainAxisExtent: size.width <= 500 ? 250.0 : 350.0),
                         itemCount: blog.length,
                         itemBuilder: (_, index) {
-                          String dateTimefecha =
-                              _listaIcons.fechaCompleta(blog[index].timesData);
+                          // String dateTimefecha =
+                          //     _listaIcons.fechaCompleta(blog[index].timesData);
 
                           return GestureDetector(
-                            onTap: () => context.go('/blog/${blog[index].id}')
-                            // onTap: () => context.go('/family/${f.id}'),
+                            onTap: () => _launchURLBrowser(blog[index].post)
                             ,
                             child: Container(
                               decoration: BoxDecoration(
@@ -173,10 +173,10 @@ class PageExample2 extends StatelessWidget {
                                   Expanded(
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          image: const DecorationImage(
+                                          image:  DecorationImage(
                                               fit: BoxFit.fill,
                                               image: NetworkImage(
-                                                  'https://www.worldenergytrade.com/images/stories/news/energias_alternativas/general/11758/china-no-deberia-prohibir-la-mineria-de-bitcoin-basada-en-energia-limpia-11758.jpg')),
+                                                  blog[index].imglink)),
                                           color: colormenta,
                                           borderRadius: const BorderRadius.only(
                                               topLeft: Radius.circular(10.0),
@@ -188,15 +188,9 @@ class PageExample2 extends StatelessWidget {
                                     height: 2.0,
                                   ),
                                   Row(
-                                    children: [
-                                      Text(
-                                        dateTimefecha,
-                                        style: TextStyle(
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.w100,
-                                            color: colorazulospocooscuro),
-                                      ),
-                                      const Expanded(
+                                    children: const [
+                                      
+                                       Expanded(
                                         child: SizedBox(
                                           height: 2.0,
                                         ),
@@ -232,4 +226,12 @@ class PageExample2 extends StatelessWidget {
       )),
     );
   }
+  _launchURLBrowser(String link) async {
+  final url = link;
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
 }

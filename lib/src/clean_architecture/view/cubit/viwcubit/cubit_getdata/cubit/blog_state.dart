@@ -10,7 +10,7 @@ abstract class BlogState extends Equatable {
 class BlogInitial extends BlogState {}
 
 class BlogLoaded extends BlogState {
-  final List<Blog> blog;
+  final List<Blog>  blog;
   const BlogLoaded(this.blog);
 
   @override
