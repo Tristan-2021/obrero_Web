@@ -78114,28 +78114,29 @@ $S:482}
 A.MA.prototype={
 G(a,b){return new A.A8(new A.a7S(A.axE()),null)}}
 A.a7S.prototype={
-$2(a,b){var s,r,q,p,o,n,m=null,l=b.b
-$.lp.b=l/100
-if(l<=900)$.aaD.b=l/65
+$2(a,b){var s,r,q,p,o,n,m,l=null,k=b.b
+$.lp.b=k/100
+if(k<=900)$.aaD.b=k/65
 else{$.aaD.b=16
-$.lp.b=l/90}s=l<=830
+$.lp.b=k/90}s=k<=830
 r=s?50:170
-q=l<=600?$.lp.bp()*2.5:$.lp.bp()*0.5
+q=k<=600?$.lp.bp()*2.5:$.lp.bp()*0.5
 p=s?75:400
 o=s?400:150
-o=A.lk(m,new A.CP(new A.a7R(b),m,this.a.gua(),new A.ii(),t.Gp),p,m,q,m,r,o)
-r=l<=869
+o=A.lk(l,new A.CP(new A.a7R(b),l,this.a.gua(),new A.ii(),t.Gp),p,l,q,l,r,o)
+r=k<=869
 q=r?160:70
-l=l<=930
-p=l?$.lp.bp()*9:$.lp.bp()*17
+k=k<=930
+p=k?$.lp.bp()*9:$.lp.bp()*17
 n=$.aaD.bp()
-q=A.lk(m,A.dw(A.dn("Bienvenido..!",m,m,m,m,A.a3Z(B.cJ,m,B.v,2),m,m,n*0.14),m,m),m,m,p,m,q,m)
+q=A.lk(l,A.dw(A.dn("Bienvenido..!",l,l,l,l,A.a3Z(B.cJ,l,B.v,2),l,l,n*0.14),l,l),l,l,p,l,q,l)
 p=r?210:140
-n=l?$.lp.bp()*9:$.lp.bp()*17
-p=A.lk(m,A.dw(A.dn("Aqu\xed encontrar\xe1s contenido\nrelacionado al Derecho y la\nProgramaci\xf3n",m,m,m,m,A.a3Z(B.cJ,$.aaD.bp()*3.3,B.aL,2),m,m,m),m,m),m,m,n,m,p,m)
+n=k?$.lp.bp()*9:$.lp.bp()*17
+m=k?"Aqu\xed encontrar\xe1s contenido\nrelacionado al Derecho\nDigital y Programaci\xf3n":"Aqu\xed encontrar\xe1s contenido\nrelacionado al Derecho Digital y \nProgramaci\xf3n"
+p=A.lk(l,A.dw(A.dn(m,l,l,l,l,A.a3Z(B.cJ,$.aaD.bp()*3.3,B.aL,2),l,l,l),l,l),l,l,n,l,p,l)
 s=s?340:430
-l=l?$.lp.bp()*9:$.lp.bp()*17
-return A.Cb(m,B.ev,A.nl(B.bJ,A.b([B.P_,o,q,p,A.lk(m,A.dn("En este Blog hablaremos sobre\nprogramaci\xf3n y el Derecho Digital, haciendo una\nfusi\xf3n de ambas profesiones pero de\nvez en cuando tratar\xe9 otros temas",m,m,m,m,A.a3Z(B.cJ,r?13:18,B.cc,2),B.da,m,m),m,m,l,m,s,m)],t.p),B.J,B.c1))},
+k=k?$.lp.bp()*9:$.lp.bp()*17
+return A.Cb(l,B.ev,A.nl(B.bJ,A.b([B.P_,o,q,p,A.lk(l,A.dn("En este Blog trataremos contenido sobre\nprogramaci\xf3n, Protecci\xf3n Datos, Ciberdelitos, Derecho\nDigital,haciendo una miscel\xe1nia de ambas profesiones pero de\nvez en cuando tratar\xe9 otros temas",l,l,l,l,A.a3Z(B.cJ,r?13:18,B.cc,2),B.da,l,l),l,l,k,l,s,l)],t.p),B.J,B.c1))},
 $S:483}
 A.a7R.prototype={
 $2(a,b){var s,r,q,p,o=null,n=b.b
