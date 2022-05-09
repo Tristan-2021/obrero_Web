@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_strategy/url_strategy.dart';
 import 'example/homeApp/myapp.dart';
 // void configureApp() {
 //   setUrlStrategy(PathUrlStrategy());
@@ -17,6 +16,6 @@ void main() async {
   //   appId: '',
   //   measurementId: '',
   // ));
-  setPathUrlStrategy();
+  //setPathUrlStrategy();
   runApp(const MyApp());
 }
