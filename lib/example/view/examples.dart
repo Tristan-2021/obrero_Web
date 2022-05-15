@@ -5,6 +5,7 @@ import 'package:nombreapp/example/core/responsive/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../cubit/blog_cubit.dart';
+import '../utils/colors.dart';
 import '../utils/icons_stream.dart';
 import '../utils/style_text_font.dart';
 
@@ -22,94 +23,115 @@ class PageExample1 extends StatelessWidget {
       ResponsiveUi.init(constrains);
 
       return Scaffold(
-        backgroundColor: colorazulospocooscuro,
-        body: Stack(
-          children: [
-            const SizedBox(
-              width: double.infinity,
-              height: double.infinity,
-            ),
-            Positioned(
-              top: constrains.maxWidth <= 830 ? 50.0 : 170.0,
-              left: constrains.maxWidth <= 600
-                  ? ResponsiveUi.textcontraints * 2.5
-                  : ResponsiveUi.textcontraints * 0.5,
-              height: constrains.maxWidth <= 830 ? 75.0 : 400,
-              width: constrains.maxWidth <= 830 ? 400 : 150,
-              child: StreamBuilder<List<Widget>>(
-                  key: UniqueKey(),
-                  stream: stream.widgetBoton,
-                  builder: (context, AsyncSnapshot<List<Widget>> snapshot) {
-                    if (!snapshot.hasData) {
-                      return const Center(
-                        child: Text("...."),
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+
+            gradient: LinearGradient(
+              stops: const [
+                0.1,
+                0.4,
+               
+              ],
+             colors: [
+colorsbackground1,
+               colorsbackground,
+             ]
+             ,
+             begin: Alignment.bottomCenter, 
+            end: Alignment.topCenter
+            )
+          ),
+          
+          child: Stack(
+            children: [
+              const SizedBox(
+                width: double.infinity,
+                height: double.infinity,
+              ),
+              Positioned(
+                top: constrains.maxWidth <= 830 ? 50.0 : 170.0,
+                left: constrains.maxWidth <= 600
+                    ? ResponsiveUi.textcontraints * 2.5
+                    : ResponsiveUi.textcontraints * 0.5,
+                height: constrains.maxWidth <= 830 ? 75.0 : 400,
+                width: constrains.maxWidth <= 830 ? 400 : 150,
+                child: StreamBuilder<List<Widget>>(
+                    key: UniqueKey(),
+                    stream: stream.widgetBoton,
+                    builder: (context, AsyncSnapshot<List<Widget>> snapshot) {
+                      if (!snapshot.hasData) {
+                        return const Center(
+                          child: Text("...."),
+                        );
+                      }
+                      return ListView.builder(
+                        scrollDirection: constrains.maxWidth <= 830
+                            ? Axis.horizontal
+                            : Axis.vertical,
+                        itemCount: snapshot.data!.length,
+                        itemBuilder: (context, index) => Container(
+                          margin: constrains.maxWidth <= 869
+                              ? const EdgeInsets.all(5.0)
+                              : const EdgeInsets.all(10.0),
+                          child: snapshot.data![index],
+                        ),
                       );
-                    }
-                    return ListView.builder(
-                      scrollDirection: constrains.maxWidth <= 830
-                          ? Axis.horizontal
-                          : Axis.vertical,
-                      itemCount: snapshot.data!.length,
-                      itemBuilder: (context, index) => Container(
-                        margin: constrains.maxWidth <= 869
-                            ? const EdgeInsets.all(5.0)
-                            : const EdgeInsets.all(10.0),
-                        child: snapshot.data![index],
-                      ),
-                    );
-                  }),
-            ),
-            Positioned(
-              top: constrains.maxWidth <= 869 ? 160.0 : 70,
-              left: constrains.maxWidth <= 930
-                  ? ResponsiveUi.textcontraints * 9.0
-                  : ResponsiveUi.textcontraints * 17.0,
-              child: SizedBox(
-                child: Text(
-                  bienvenidos,
-                  textScaleFactor: ResponsiveUi.textHeith * 0.14,
-                  style: GoogleFonts.lato(
-                      color: const Color(0xffD0F1EF),
-                      // fontSize: ResponsiveUi.textHeith * 2.0,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 2.0),
+                    }),
+              ),
+              Positioned(
+                top: constrains.maxWidth <= 869 ? 160.0 : 70,
+                left: constrains.maxWidth <= 930
+                    ? ResponsiveUi.textcontraints * 9.0
+                    : ResponsiveUi.textcontraints * 17.0,
+                child: SizedBox(
+                  child: Text(
+                    bienvenidos,
+                    textScaleFactor: ResponsiveUi.textHeith * 0.14,
+                    style: GoogleFonts.lato(
+                        color: const Color(0xffD0F1EF),
+                        // fontSize: ResponsiveUi.textHeith * 2.0,
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: 2.0),
+                  ),
                 ),
               ),
-            ),
-            Positioned(
-              top: constrains.maxWidth <= 869 ? 210.0 : 140,
-              left: constrains.maxWidth <= 930
-                  ? ResponsiveUi.textcontraints * 9.0
-                  : ResponsiveUi.textcontraints * 17.0,
-              child: SizedBox(
-                child: Text(
-                  constrains.maxWidth <= 930
-                      ? titulosiguiente1web
-                      : titulogrande,
-                  style: GoogleFonts.lato(
-                      color: const Color(0xffD0F1EF),
-                      fontSize: ResponsiveUi.textHeith * 3.3,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 2.0),
+              Positioned(
+                top: constrains.maxWidth <= 869 ? 210.0 : 140,
+                left: constrains.maxWidth <= 930
+                    ? ResponsiveUi.textcontraints * 9.0
+                    : ResponsiveUi.textcontraints * 17.0,
+                child: SizedBox(
+                  child: Text(
+                    constrains.maxWidth <= 930
+                        ? titulosiguiente1web
+                        : titulogrande,
+                    style: GoogleFonts.lato(
+                        color: const Color(0xffD0F1EF),
+                        fontSize: ResponsiveUi.textHeith * 3.3,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 2.0),
+                  ),
                 ),
               ),
-            ),
-            Positioned(
-              top: constrains.maxWidth <= 830 ? 340 : 430,
-              left: constrains.maxWidth <= 930
-                  ? ResponsiveUi.textcontraints * 9.0
-                  : ResponsiveUi.textcontraints * 17.0,
-              child: Text(
-                titulosiguiente,
-                style: GoogleFonts.lato(
-                    color: const Color(0xffD0F1EF),
-                    fontSize: constrains.maxWidth <= 869 ? 13 : 18,
-                    fontWeight: FontWeight.w300,
-                    letterSpacing: 2.0),
-                textAlign: TextAlign.justify,
+              Positioned(
+                top: constrains.maxWidth <= 830 ? 340 : 430,
+                left: constrains.maxWidth <= 930
+                    ? ResponsiveUi.textcontraints * 9.0
+                    : ResponsiveUi.textcontraints * 17.0,
+                child: Text(
+                  titulosiguiente,
+                  style: GoogleFonts.lato(
+                      color: const Color(0xffD0F1EF),
+                      fontSize: constrains.maxWidth <= 869 ? 13 : 18,
+                      fontWeight: FontWeight.w300,
+                      letterSpacing: 2.0),
+                  textAlign: TextAlign.justify,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
     });

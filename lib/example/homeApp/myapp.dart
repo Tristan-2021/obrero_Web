@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nombreapp/example/view/home_page.dart';
 
 import '../cubit/blog_cubit.dart';
+import '../utils/colors.dart';
 
 
 
@@ -25,6 +26,8 @@ class _MyAppState extends State<MyApp> {
         title: 'Obrero Programador',
         home: const HomePage(key: Key('únic')),
         theme: ThemeData(
+          secondaryHeaderColor: colorsbackground,
+          scaffoldBackgroundColor: colorsbackground,
           primarySwatch: Colors.blue,
         ),
       ),

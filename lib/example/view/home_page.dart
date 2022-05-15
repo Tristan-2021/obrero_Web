@@ -75,10 +75,10 @@ class _HomePageState extends State<HomePage> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-        backgroundColor: colorazulospocooscuro,
+        backgroundColor: Theme.of(context).backgroundColor,
         appBar: AppBar(
             elevation: 0.0,
-            backgroundColor: colorazulospocooscuro,
+            backgroundColor: Theme.of(context).secondaryHeaderColor,
             actions: [
               const SizedBox(
                 height: 40,
