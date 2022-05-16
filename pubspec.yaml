@@ -85,6 +85,20 @@ flutter:
     - family: Trajan Pro
       fonts:
         - asset: fonts/Dosis-VariableFont_wght.ttf
+    - family: Britanica 
+      fonts:
+          
+        - asset: fonts/Britanica Black italic.ttf
+    - family: Britanica Black 
+      fonts:
+      
+        - asset: fonts/Britanica Black.ttf
+    - family: Britanica Bold 
+      fonts:
+      
+        - asset: fonts/Britanica Bold Italic.ttf
+
+
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

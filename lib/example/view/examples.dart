@@ -9,7 +9,6 @@ import '../utils/colors.dart';
 import '../utils/icons_stream.dart';
 import '../utils/style_text_font.dart';
 
-
 class PageExample1 extends StatelessWidget {
   final VoidCallback onTap;
   final Size size;
@@ -27,23 +26,21 @@ class PageExample1 extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  // stops: const [
+                  //   0.8,
+                  //   0.8,
 
-            gradient: LinearGradient(
-              stops: const [
-                0.1,
-                0.4,
-               
-              ],
-             colors: [
-colorsbackground1,
-               colorsbackground,
-             ]
-             ,
-             begin: Alignment.bottomCenter, 
-            end: Alignment.topCenter
-            )
-          ),
-          
+                  //  0.8,
+                  //    1.9,
+
+                  // ],
+                  colors: [
+                colorsbackground,
+                colorsbackground1,
+                colorsbackground,
+                colorsbackground,
+              ], begin: Alignment.centerRight, end: Alignment.centerRight)),
           child: Stack(
             children: [
               const SizedBox(
@@ -53,7 +50,7 @@ colorsbackground1,
               Positioned(
                 top: constrains.maxWidth <= 830 ? 50.0 : 170.0,
                 left: constrains.maxWidth <= 600
-                    ? ResponsiveUi.textcontraints * 2.5
+                    ? ResponsiveUi.textcontraints * 6.5
                     : ResponsiveUi.textcontraints * 0.5,
                 height: constrains.maxWidth <= 830 ? 75.0 : 400,
                 width: constrains.maxWidth <= 830 ? 400 : 150,
@@ -73,7 +70,7 @@ colorsbackground1,
                         itemCount: snapshot.data!.length,
                         itemBuilder: (context, index) => Container(
                           margin: constrains.maxWidth <= 869
-                              ? const EdgeInsets.all(5.0)
+                              ? const EdgeInsets.all(8.0)
                               : const EdgeInsets.all(10.0),
                           child: snapshot.data![index],
                         ),
@@ -83,14 +80,15 @@ colorsbackground1,
               Positioned(
                 top: constrains.maxWidth <= 869 ? 160.0 : 70,
                 left: constrains.maxWidth <= 930
-                    ? ResponsiveUi.textcontraints * 9.0
+                    ? ResponsiveUi.textcontraints * 5.0
                     : ResponsiveUi.textcontraints * 17.0,
                 child: SizedBox(
                   child: Text(
                     bienvenidos,
                     textScaleFactor: ResponsiveUi.textHeith * 0.14,
-                    style: GoogleFonts.lato(
-                        color: const Color(0xffD0F1EF),
+                    style: GoogleFonts.catamaran(
+                        color: const Color.fromARGB(255, 242, 248, 247),
+
                         // fontSize: ResponsiveUi.textHeith * 2.0,
                         fontWeight: FontWeight.w400,
                         letterSpacing: 2.0),
@@ -100,17 +98,17 @@ colorsbackground1,
               Positioned(
                 top: constrains.maxWidth <= 869 ? 210.0 : 140,
                 left: constrains.maxWidth <= 930
-                    ? ResponsiveUi.textcontraints * 9.0
+                    ? ResponsiveUi.textcontraints * 5.0
                     : ResponsiveUi.textcontraints * 17.0,
                 child: SizedBox(
                   child: Text(
                     constrains.maxWidth <= 930
                         ? titulosiguiente1web
                         : titulogrande,
-                    style: GoogleFonts.lato(
-                        color: const Color(0xffD0F1EF),
+                    style: GoogleFonts.exo2(
+                        color: const Color.fromARGB(255, 242, 248, 247),
                         fontSize: ResponsiveUi.textHeith * 3.3,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w600,
                         letterSpacing: 2.0),
                   ),
                 ),
@@ -118,13 +116,13 @@ colorsbackground1,
               Positioned(
                 top: constrains.maxWidth <= 830 ? 340 : 430,
                 left: constrains.maxWidth <= 930
-                    ? ResponsiveUi.textcontraints * 9.0
+                    ? ResponsiveUi.textcontraints * 5.0
                     : ResponsiveUi.textcontraints * 17.0,
                 child: Text(
                   titulosiguiente,
-                  style: GoogleFonts.lato(
-                      color: const Color(0xffD0F1EF),
-                      fontSize: constrains.maxWidth <= 869 ? 13 : 18,
+                  style: GoogleFonts.exo2(
+                      color: const Color.fromARGB(255, 242, 248, 247),
+                      fontSize: constrains.maxWidth <= 869 ? 12 : 18,
                       fontWeight: FontWeight.w300,
                       letterSpacing: 2.0),
                   textAlign: TextAlign.justify,
@@ -149,7 +147,7 @@ class PageExample2 extends StatelessWidget {
   Widget build(BuildContext context) {
     ListaIcons _listaIcons = ListaIcons();
     return Scaffold(
-      backgroundColor: colorazulospocooscuro,
+      backgroundColor: colorsbackground,
       body: Center(
           child: SizedBox(
         width: size.width <= 500 ? 350 : 1000,
@@ -181,11 +179,11 @@ class PageExample2 extends StatelessWidget {
                               _listaIcons.fechaCompleta(blog[index].timesData);
 
                           return GestureDetector(
-                            onTap: () => _launchURLBrowser(blog[index].post)
-                            ,
+                            onTap: () => _launchURLBrowser(blog[index].post),
                             child: Container(
                               decoration: BoxDecoration(
-                                  color: const Color(0xffD0F1EF),
+                                  color:
+                                      const Color(0xff1f334d),
                                   borderRadius: BorderRadius.circular(10.0)),
                               margin: const EdgeInsets.all(25.0),
                               padding: const EdgeInsets.all(10.0),
@@ -196,10 +194,10 @@ class PageExample2 extends StatelessWidget {
                                   Expanded(
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          image:  DecorationImage(
+                                          image: DecorationImage(
                                               fit: BoxFit.fill,
                                               image: NetworkImage(
-                                                  blog[index].imglink )),
+                                                  blog[index].imglink)),
                                           color: colormenta,
                                           borderRadius: const BorderRadius.only(
                                               topLeft: Radius.circular(10.0),
@@ -211,15 +209,15 @@ class PageExample2 extends StatelessWidget {
                                     height: 2.0,
                                   ),
                                   Row(
-                                    children: [
-                                      Text(
-                                        dateTimefecha,
-                                        style: TextStyle(
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.w100,
-                                            color: colorazulospocooscuro),
-                                      ),
-                                      const Expanded(
+                                    children: const [
+                                      // Text(
+                                      //   dateTimefecha,
+                                      //   style: TextStyle(
+                                      //       fontSize: 14.0,
+                                      //       fontWeight: FontWeight.w100,
+                                      //       color: colorazulospocooscuro),
+                                      // ),
+                                      Expanded(
                                         child: SizedBox(
                                           height: 2.0,
                                         ),
@@ -255,12 +253,13 @@ class PageExample2 extends StatelessWidget {
       )),
     );
   }
-   _launchURLBrowser(String link) async {
-  final url = link;
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+
+  _launchURLBrowser(String link) async {
+    final url = link;
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
-}
 }
