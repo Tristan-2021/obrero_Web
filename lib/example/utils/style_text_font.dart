@@ -27,8 +27,8 @@ Color colormenta = const Color(0xFFe3e2de);
 
 TextStyle estiloAndroidfecha = TextStyle(
     fontSize: 14.0, fontWeight: FontWeight.w100, color: colorazulospocooscuro);
-TextStyle letrarticulos = TextStyle(
-    fontSize: 18.0, fontWeight: FontWeight.w700, color:const  Color.fromARGB(255, 242, 248, 247) );
+TextStyle letrarticulos = const TextStyle(
+    fontSize: 18.0, fontWeight: FontWeight.w700, color:  Color.fromARGB(255, 242, 248, 247) );
 Color colorazuloscuro = const Color(0xff183B56);
 Color colorazuloscuro1 = const Color.fromRGBO(37, 150, 190, 0);
 // pantalla Dispostivo,
