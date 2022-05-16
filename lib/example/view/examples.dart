@@ -38,9 +38,7 @@ class PageExample1 extends StatelessWidget {
                   colors: [
                 colorsbackground,
                 colorsbackground1,
-                colorsbackground,
-                colorsbackground,
-              ], begin: Alignment.centerRight, end: Alignment.centerRight)),
+              ], begin: Alignment.topCenter, end: Alignment.topCenter)),
           child: Stack(
             children: [
               const SizedBox(
@@ -70,7 +68,7 @@ class PageExample1 extends StatelessWidget {
                         itemCount: snapshot.data!.length,
                         itemBuilder: (context, index) => Container(
                           margin: constrains.maxWidth <= 869
-                              ? const EdgeInsets.all(8.0)
+                              ? const EdgeInsets.all(5.0)
                               : const EdgeInsets.all(10.0),
                           child: snapshot.data![index],
                         ),
@@ -80,7 +78,7 @@ class PageExample1 extends StatelessWidget {
               Positioned(
                 top: constrains.maxWidth <= 869 ? 160.0 : 70,
                 left: constrains.maxWidth <= 930
-                    ? ResponsiveUi.textcontraints * 5.0
+                    ? ResponsiveUi.textcontraints * 9.0
                     : ResponsiveUi.textcontraints * 17.0,
                 child: SizedBox(
                   child: Text(
@@ -98,7 +96,7 @@ class PageExample1 extends StatelessWidget {
               Positioned(
                 top: constrains.maxWidth <= 869 ? 210.0 : 140,
                 left: constrains.maxWidth <= 930
-                    ? ResponsiveUi.textcontraints * 5.0
+                    ? ResponsiveUi.textcontraints * 9.0
                     : ResponsiveUi.textcontraints * 17.0,
                 child: SizedBox(
                   child: Text(
@@ -116,15 +114,15 @@ class PageExample1 extends StatelessWidget {
               Positioned(
                 top: constrains.maxWidth <= 830 ? 340 : 430,
                 left: constrains.maxWidth <= 930
-                    ? ResponsiveUi.textcontraints * 5.0
+                    ? ResponsiveUi.textcontraints * 9.0
                     : ResponsiveUi.textcontraints * 17.0,
                 child: Text(
                   titulosiguiente,
                   style: GoogleFonts.exo2(
                       color: const Color.fromARGB(255, 242, 248, 247),
-                      fontSize: constrains.maxWidth <= 869 ? 12 : 18,
-                      fontWeight: FontWeight.w300,
-                      letterSpacing: 2.0),
+                      fontSize: constrains.maxWidth <= 869 ? 11 : 18,
+                      fontWeight: FontWeight.w200,
+                      letterSpacing: 1.0),
                   textAlign: TextAlign.justify,
                 ),
               ),
@@ -183,7 +181,7 @@ class PageExample2 extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                   color:
-                                      const Color(0xff1f334d),
+                                      Color.fromARGB(255, 234, 235, 237),
                                   borderRadius: BorderRadius.circular(10.0)),
                               margin: const EdgeInsets.all(25.0),
                               padding: const EdgeInsets.all(10.0),

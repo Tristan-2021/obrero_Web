@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nombreapp/example/utils/colors.dart';
 import 'package:nombreapp/example/view/examples.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -24,7 +25,7 @@ class _HomePageState extends State<HomePage> {
 
     _itemPositionListener.itemPositions.addListener(() {});
   }
-
+ bool colorbarra = false;
   Widget selecte(
     index,
     size,
@@ -86,25 +87,39 @@ class _HomePageState extends State<HomePage> {
               TextButton(
                 onPressed: () => selecwidget(0),
                 child: Text(
-                  'Acerca de',
-                  style: GoogleFonts.actor(
-                      color: const Color(0xffD0F1EF),
+                  'Home',
+                  style: GoogleFonts.exo2(
+                                              color: const Color.fromARGB(255, 242, 248, 247),
+
                       fontSize: 18.0,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 2.0),
                 ),
               ),
+              
               const SizedBox(
-                height: 40,
+                width: 35,
               ),
               TextButton(
+                style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.resolveWith<Color>(  
+                  (Set<MaterialState> state) {
+                  if(!state.contains(MaterialState.pressed)){
+                    return colorsbackground;
+                  } 
+                    return colorsbackground1;
+                  
+              
+                }) 
+                ),
                 onPressed: () => selecwidget(1),
                 child: Text(
                   'Artículos',
-                  style: GoogleFonts.lato(
-                      color: const Color(0xffD0F1EF),
+                  style: GoogleFonts.exo2(
+                                     color: const Color.fromARGB(255, 242, 248, 247),
+              
                       fontSize: 18.0,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 2.0),
                 ),
               ),

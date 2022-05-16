@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nombreapp/example/core/responsive/responsive.dart';
+import 'package:nombreapp/example/utils/colors.dart';
 
 String titulogrande =
     'Aquí encontrarás contenido\nrelacionado al Derecho Digital y \nProgramación';
@@ -23,12 +24,12 @@ TextStyle tituloblog = const TextStyle(
     fontSize: 27.0, fontWeight: FontWeight.w700, color: Colors.white);
 //letraarticulos
 Color colorletrarticulos = const Color(0xFFf49344);
-Color colormenta = const Color(0xFFe3e2de);
+Color colormenta = Color.fromARGB(255, 239, 238, 235);
 
 TextStyle estiloAndroidfecha = TextStyle(
     fontSize: 14.0, fontWeight: FontWeight.w100, color: colorazulospocooscuro);
-TextStyle letrarticulos = const TextStyle(
-    fontSize: 18.0, fontWeight: FontWeight.w700, color:  Color.fromARGB(255, 242, 248, 247) );
+TextStyle letrarticulos =  TextStyle(
+    fontSize: 18.0, fontWeight: FontWeight.w700, color:  colorsbackground1 );
 Color colorazuloscuro = const Color(0xff183B56);
 Color colorazuloscuro1 = const Color.fromRGBO(37, 150, 190, 0);
 // pantalla Dispostivo,
