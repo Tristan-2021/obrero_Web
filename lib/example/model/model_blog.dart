@@ -4,7 +4,7 @@
 import 'blog.dart';
 
 class BlogModel extends Blog {
-  BlogModel({
+  const BlogModel({
     required this.post,
     //required this.post1,
     required this.titulo,

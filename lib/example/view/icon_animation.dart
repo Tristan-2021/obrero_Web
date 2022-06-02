@@ -9,7 +9,7 @@ class CustomContainer extends StatefulWidget {
   final String url, redScoial;
   final IconData name;
   final Color color;
-  CustomContainer(
+  const CustomContainer(
       {required Key key,
       required this.redScoial,
       required this.name,
@@ -57,8 +57,8 @@ class _CustomContainerState extends State<CustomContainer>
   @override
   Widget build(BuildContext context) {
     final wtihSize = MediaQuery.of(context).size.height;
-    final wtihSize1 = 75.0;
-    final sizeIcon = 34.0;
+    const wtihSize1 = 75.0;
+    const sizeIcon = 34.0;
 
     double currentHeig = wtihSize1;
     double currentsizeIcon = sizeIcon;

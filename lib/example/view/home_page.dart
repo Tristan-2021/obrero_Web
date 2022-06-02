@@ -7,8 +7,11 @@ import 'package:nombreapp/example/utils/colors.dart';
 import 'package:nombreapp/example/view/examples.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
+<<<<<<< Updated upstream
 import '../core/responsive/responsive.dart';
 import '../utils/style_text_font.dart';
+=======
+>>>>>>> Stashed changes
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
