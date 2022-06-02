@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nombreapp/example/view/icon_animation.dart';
@@ -71,20 +70,20 @@ class ListaIcons {
         return 'Fecha';
     }
   }
-  
-  String fechaCompleta(Timestamp data) {
-    int datames =
-        DateTime.fromMicrosecondsSinceEpoch(data.microsecondsSinceEpoch)
-            .toLocal()
-            .month;
-    String mes = fecha(datames);
-    int day = DateTime.fromMicrosecondsSinceEpoch(data.microsecondsSinceEpoch)
-        .toLocal()
-        .day;
-    int year = DateTime.fromMicrosecondsSinceEpoch(data.microsecondsSinceEpoch)
-        .toLocal()
-        .year;
-    String fechaaprseada = '$mes $day, $year';
-    return fechaaprseada;
-  }
+    static  fechaCompleta(String data ){}
+  // String fechaCompleta(Timestamp data) {
+  //   int datames =
+  //       DateTime.fromMicrosecondsSinceEpoch(data.microsecondsSinceEpoch)
+  //           .toLocal()
+  //           .month;
+  //   String mes = fecha(datames);
+  //   int day = DateTime.fromMicrosecondsSinceEpoch(data.microsecondsSinceEpoch)
+  //       .toLocal()
+  //       .day;
+  //   int year = DateTime.fromMicrosecondsSinceEpoch(data.microsecondsSinceEpoch)
+  //       .toLocal()
+  //       .year;
+  //   String fechaaprseada = '$mes $day, $year';
+  //   return fechaaprseada;
+  // }
 }

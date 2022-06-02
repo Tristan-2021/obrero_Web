@@ -38,6 +38,8 @@ class PageExample1 extends StatelessWidget {
                   colors: [
                 colorsbackground,
                 colorsbackground1,
+                colorsbackground,
+
               ], begin: Alignment.topCenter, end: Alignment.topCenter)),
           child: Stack(
             children: [
@@ -120,10 +122,10 @@ class PageExample1 extends StatelessWidget {
                   titulosiguiente,
                   style: GoogleFonts.exo2(
                       color: const Color.fromARGB(255, 242, 248, 247),
-                      fontSize: constrains.maxWidth <= 869 ? 11 : 18,
+                      fontSize: constrains.maxWidth <= 869 ? 13 : 18,
                       fontWeight: FontWeight.w200,
                       letterSpacing: 1.0),
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.start,
                 ),
               ),
             ],
@@ -143,9 +145,8 @@ class PageExample2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ListaIcons _listaIcons = ListaIcons();
     return Scaffold(
-      backgroundColor: colorsbackground,
+      backgroundColor: Colors.white,
       body: Center(
           child: SizedBox(
         width: size.width <= 500 ? 350 : 1000,
@@ -155,6 +156,7 @@ class PageExample2 extends StatelessWidget {
               'Artículos',
               style: tituloblog,
               textAlign: TextAlign.center,
+              
             ),
             Expanded(
               child: BlocBuilder<BlogCubit, BlogState>(
@@ -173,15 +175,14 @@ class PageExample2 extends StatelessWidget {
                             mainAxisExtent: size.width <= 500 ? 250.0 : 350.0),
                         itemCount: blog.length,
                         itemBuilder: (_, index) {
-                          String dateTimefecha =
-                              _listaIcons.fechaCompleta(blog[index].timesData);
+                             // _listaIcons.fechaCompleta(blog[index].timesData);
 
                           return GestureDetector(
                             onTap: () => _launchURLBrowser(blog[index].post),
                             child: Container(
                               decoration: BoxDecoration(
                                   color:
-                                      Color.fromARGB(255, 234, 235, 237),
+                                       const Color.fromARGB(255, 234, 235, 237),
                                   borderRadius: BorderRadius.circular(10.0)),
                               margin: const EdgeInsets.all(25.0),
                               padding: const EdgeInsets.all(10.0),
@@ -208,13 +209,7 @@ class PageExample2 extends StatelessWidget {
                                   ),
                                   Row(
                                     children: const [
-                                      // Text(
-                                      //   dateTimefecha,
-                                      //   style: TextStyle(
-                                      //       fontSize: 14.0,
-                                      //       fontWeight: FontWeight.w100,
-                                      //       color: colorazulospocooscuro),
-                                      // ),
+                                    
                                       Expanded(
                                         child: SizedBox(
                                           height: 2.0,

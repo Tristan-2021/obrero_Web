@@ -7,7 +7,7 @@ String titulogrande =
     'Aquí encontrarás contenido\nrelacionado al Derecho Digital y \nProgramación';
 String bienvenidos = 'Bienvenido..!';
 String titulosiguiente =
-    'En este Blog trataremos contenido sobre\nprogramación, Protección Datos, Ciberdelitos, Derecho\nDigital,haciendo una miscelánia de ambas profesiones pero de\nvez en cuando trataré otros temas';
+    'En este Blog trataremos contenido sobre\nprogramación, Protección Datos, Ciberdelitos\nDerecho Digital, haciendo una miscelánia de\nambas profesiones aunque también trataré\nde otros temas';
 String titulosiguiente1 =
     'En este Blog trataremos contenido sobre\nProtección Datos, Ciberdelitos, Derecho Digital\n,haciendo una miscelánia de ambas profesiones pero de\nvez en cuando trataré otros temas';
 String titulosiguiente1web =
@@ -20,8 +20,8 @@ TextStyle estiloAndroititulo =
     const TextStyle(fontSize: 18.0, fontWeight: FontWeight.w700);
 TextStyle estiloAndroititulo1 = const TextStyle(
     fontSize: 18.0, fontWeight: FontWeight.w700, color: Colors.white);
-TextStyle tituloblog = const TextStyle(
-    fontSize: 27.0, fontWeight: FontWeight.w700, color: Colors.white);
+TextStyle tituloblog =  TextStyle(
+    fontSize: 27.0, fontWeight: FontWeight.w700, color: colorsbackground);
 //letraarticulos
 Color colorletrarticulos = const Color(0xFFf49344);
 Color colormenta = Color.fromARGB(255, 239, 238, 235);
