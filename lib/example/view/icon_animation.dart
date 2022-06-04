@@ -44,8 +44,8 @@ class _CustomContainerState extends State<CustomContainer>
     super.initState();
   }
 
-  void _launchURL() async => await canLaunch(widget.url)
-      ? await launch(widget.url)
+  void _launchURL() async => await launchUrl(Uri.file(widget.url))
+      ? await launchUrl(Uri.file(widget.url))
       : throw 'Could not launch $widget.url';
 
   @override

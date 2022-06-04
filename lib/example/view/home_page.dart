@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nombreapp/example/utils/colors.dart';
 import 'package:nombreapp/example/view/examples.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 import '../core/responsive/responsive.dart';
@@ -89,8 +90,9 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
             elevation: 1.3,
             backgroundColor: Theme.of(context).secondaryHeaderColor,
-            actions:   
-  [
+            leading: (  ResponsiveUi.textcontraints *15 <= 87) ? const Icon(Icons.menu) : null, 
+          actions:!(  ResponsiveUi.textcontraints *15 <= 87) ?    
+  [ 
                 TextButton(
                 onPressed: () => selecwidget(0),
                 child: Text(
@@ -103,20 +105,7 @@ class _HomePageState extends State<HomePage> {
                       letterSpacing: 2.0),
                 ),
               ),
-              //Todo: arreglar el tamaño de 
-             
-              //    SizedBox(
-              //      child:  constrains.minWidth <= 600 ? 
-              //      Text('${ResponsiveUi.textcontraints * 3.0}',
-              //       style:const  TextStyle(color: Colors.white), ) : 
-              //      Text('${ResponsiveUi.textcontraints * 10.0}') ,
-                
-              // ),
-               
-              //  Divider(
-              //    color: Colors.red,
-              //    indent: 2.0,
-              //  ),
+const    Spacer(),
            
                  TextButton(
                 style: ButtonStyle(
@@ -156,7 +145,7 @@ class _HomePageState extends State<HomePage> {
               
                 }) 
                 ),
-                onPressed: () => selecwidget(1),
+                onPressed: () async=> selecwidget(1),
                 child: Text(
                   'Artículos',
                   style: GoogleFonts.exo2(
@@ -191,13 +180,13 @@ class _HomePageState extends State<HomePage> {
                endIndent: 15.0,
                color: Color.fromARGB(255, 57, 66, 64), thickness: 1.0),
                    TextButton(
-                onPressed: () => selecwidget(0),
+                onPressed: () async=> await launchUrl(Uri.file('https://github.com/Tristan-2021/') ) ,
                 child: const  Icon(FontAwesomeIcons.github, color: Colors.white,),
               ),
               const SizedBox(
                 width: 10,
               ),
-            ]),
+            ] : null  ),
         body: SafeArea(
             child: Center(
                 child: ScrollablePositionedList.builder(
