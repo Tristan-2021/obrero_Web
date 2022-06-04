@@ -7,11 +7,10 @@ import 'package:nombreapp/example/utils/colors.dart';
 import 'package:nombreapp/example/view/examples.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-<<<<<<< Updated upstream
+
 import '../core/responsive/responsive.dart';
 import '../utils/style_text_font.dart';
-=======
->>>>>>> Stashed changes
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -90,20 +89,8 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
             elevation: 1.3,
             backgroundColor: Theme.of(context).secondaryHeaderColor,
-            actions:  constrains.maxWidth <= 560 ? [
-   TextButton(
-                onPressed: () => selecwidget(0),
-                child: Text(
-                  'Home',
-                  style: GoogleFonts.exo2(
-                                              color: const Color.fromARGB(255, 242, 248, 247),
-
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w300,
-                      letterSpacing: 2.0),
-                ),
-              ),
-            ] : [
+            actions:   
+  [
                 TextButton(
                 onPressed: () => selecwidget(0),
                 child: Text(
@@ -118,14 +105,18 @@ class _HomePageState extends State<HomePage> {
               ),
               //Todo: arreglar el tamaño de 
              
-                 SizedBox(
-                   child:  constrains.minWidth <= 600 ? 
-                   Text('${ResponsiveUi.textcontraints * 3.0}') : 
-                   Text('${ResponsiveUi.textcontraints * 10.0}') ,
+              //    SizedBox(
+              //      child:  constrains.minWidth <= 600 ? 
+              //      Text('${ResponsiveUi.textcontraints * 3.0}',
+              //       style:const  TextStyle(color: Colors.white), ) : 
+              //      Text('${ResponsiveUi.textcontraints * 10.0}') ,
                 
-              ),
+              // ),
                
-              
+              //  Divider(
+              //    color: Colors.red,
+              //    indent: 2.0,
+              //  ),
            
                  TextButton(
                 style: ButtonStyle(
@@ -204,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                 child: const  Icon(FontAwesomeIcons.github, color: Colors.white,),
               ),
               const SizedBox(
-                width: 25,
+                width: 10,
               ),
             ]),
         body: SafeArea(
